@@ -1,0 +1,6 @@
+techo "# Test1 " > > > README.md>> 
+git init 
+git добавить README.MD 
+git commit-m "first commit" 
+git remote add origin https://github.com/Barybin1/Test1.git 
+git push-u origin master
