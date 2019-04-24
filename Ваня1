@@ -1,0 +1,14 @@
+Var
+a,b:integer;
+begin
+write('Введите первое число - ');
+readln(a);
+write('Введите второе число - ');
+readln(b);
+writeln(a,'+',b,'=',a+b);
+writeln(a,'-',b,'=',a-b);
+writeln(a,'/',b,'=',a/b);
+writeln(a,'*',b,'=',a*b);
+end.
+
+
