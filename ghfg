@@ -1,0 +1,17 @@
+var
+    i,n,m,t,k:integer;
+function SR(k:integer):real;
+begin
+t:=t+k;
+end;
+begin
+write('введите первое число ');
+readln(n);
+writeln('введите второе число ');
+readln(m);
+k:=0;
+for i:=1 to m do
+      sr(n);
+ 
+writeln('произведение= ',t);
+end.
