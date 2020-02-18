@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+
+namespace Factory
+{
+    abstract class Avto
+    {
+        public abstract string GetType();
+    }
+
+    class Sedan: Avto
+    {
+        public override string GetType() { return "Sedan"; }
+    }
+
+    class Universal: Avto
+    {
+        public override string GetType() { return "Universal"; }
+    }
+
+    abstract class Creator
+    {
+        public abstract Avto FactoryMethod();
+    }
+
+    class SedanCreator: Creator
+    {
+        public override Avto FactoryMethod() { return new Sedan(); }
+    }
+
+    class UniversalCreator : Creator
+    {
+        public override Avto FactoryMethod() { return new Universal(); }
+    }
+
+    public class MainApp
+    {
+        public static void Main()
+        {
+            Creator[] creators = { new SedanCreator(), new UniversalCreator() };
+           
+            foreach (Creator creator in creators)
+            {
+                Avto avto = creator.FactoryMethod();
+                Console.WriteLine("Created {0}", avto.GetType());
+            }
+            Console.Read();
+        }
+    }
+}
